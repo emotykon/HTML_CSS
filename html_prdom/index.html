@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OtoPromotor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="logo-panel">
+      <img src="logo.png" alt="OtoPromotor Logo" />
+      <p class="motto">
+        Czym się różni seminarium od proseminarium?<br />Tym samym czym motor od
+        promotora
+      </p>
+    </header>
+
+    <section class="filters-panel">
+      <form id="filterForm">
+        <select name="academic-title">
+          <option value="" disabled selected>
+            Tytuł/stopień naukowy/zawodowy
+          </option>
+          <option value="1">prof. dr hab.</option>
+          <option value="2">dr</option>
+          <option value="3">mgr</option>
+        </select>
+
+        <select name="thesis-type">
+          <option value="" disabled selected>Praca dyplomowa</option>
+          <option value="1">magisterska</option>
+          <option value="2">licencjacka</option>
+          <option value="3">inżynierska</option>
+        </select>
+
+        <select name="topic">
+          <option value="" disabled selected>Obszar zainteresowań</option>
+          <optgroup label="Informatyka">
+            <option value="1">Obliczenia numeryczne</option>
+            <option value="2">Sztuczna inteligencja</option>
+          </optgroup>
+          <optgroup label="Matematyka">
+            <option value="3">Analiza danych</option>
+          </optgroup>
+        </select>
+
+        <button type="reset">Wyczyść</button>
+      </form>
+    </section>
+
+    <main class="promoters-grid">
+      <figure class="promoter-card">
+        <img
+          src="https://via.placeholder.com/150x200"
+          alt="Zdjęcie: dr Jan Kowalski"
+        />
+        <figcaption>
+          <h3>dr Jan Kowalski</h3>
+          <p>
+            <span title="Artificial Intelligence">AI</span>,
+            <span title="User Experience">UX</span>, Algorytmy
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="promoter-card">
+        <img
+          src="https://via.placeholder.com/150x200"
+          alt="Zdjęcie: prof. Anna Nowak"
+        />
+        <figcaption>
+          <h3>prof. Anna Nowak</h3>
+          <p><span title="Internet of Things">IoT</span>, Chmura, Big Data</p>
+        </figcaption>
+      </figure>
+
+      <figure class="promoter-card">
+        <img src="https://via.placeholder.com/150x200" alt="Promotor 3" />
+        <figcaption>
+          <h3>mgr Adam Słodowy</h3>
+          <p>Mechanika</p>
+        </figcaption>
+      </figure>
+      <figure class="promoter-card">
+        <img src="https://via.placeholder.com/150x200" alt="Promotor 4" />
+        <figcaption>
+          <h3>dr Ewa Brak</h3>
+          <p>Fizyka</p>
+        </figcaption>
+      </figure>
+    </main>
+  </body>
+</html>
