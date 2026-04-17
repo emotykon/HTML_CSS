@@ -1,0 +1,84 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #0f0f0f;
+  --meta-color: #606060;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Główny układ: 3 frakcje dla wideo, 1 dla sidebaru */
+.video-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 24px;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* Lewa kolumna */
+.video-player img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+}
+
+.video-info h1 {
+  font-size: 1.2rem;
+  margin: 12px 0 4px 0;
+}
+
+.meta {
+  color: var(--meta-color);
+  font-size: 0.9rem;
+}
+
+/* Prawa kolumna (Sidebar) */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.suggestion-card {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.suggestion-card img {
+  width: 160px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.suggestion-info h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Ograniczenie do 2 linii tekstu */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.suggestion-info p,
+.suggestion-info span {
+  margin: 4px 0 0 0;
+  font-size: 0.8rem;
+  color: var(--meta-color);
+}
+
+/* Responsywność: na małych ekranach sidebar ląduje pod spodem */
+@media (max-width: 1000px) {
+  .video-container {
+    grid-template-columns: 1fr;
+  }
+}
