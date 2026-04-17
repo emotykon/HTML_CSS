@@ -1,0 +1,12 @@
+Flexbox (Flexible Box Layout) to system jednowymiarowy. Oznacza to, że najlepiej sprawdza się przy układaniu elementów w jednym kierunku: albo w rzędzie, albo w kolumnie.1. Aktywacja FlexboxaPodobnie jak w Gridzie, zaczynasz od kontenera:HTML<div class="flex-container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+CSS.flex-container {
+  display: flex;
+  /* Domyślnie elementy ustawiają się w rzędzie (row) */
+  flex-direction: row; 
+  gap: 15px;
+}
+2. Główne właściwości konteneraTo one decydują o zachowaniu "dzieci" (flex items):justify-content: Pozycjonowanie wzdłuż osi głównej (poziomo przy row).center, space-between, space-around.align-items: Pozycjonowanie wzdłuż osi poprzecznej (pionowo przy row).center, stretch, flex-start.flex-wrap: Decyduje, czy elementy mają przechodzić do nowej linii, gdy braknie miejsca (wrap).3. Właściwości elementów (Flex Items)Możesz kontrolować, jak poszczególne elementy rosną lub się kurczą:flex-grow: 1;: Element wypełni całą dostępną wolną przestrzeń.flex-shrink: 0;: Element nie będzie się zmniejszał poniżej swojego rozmiaru.flex-basis: Definiuje początkowy rozmiar elementu przed podziałem wolnego miejsca.Grid vs Flexbox – Kiedy co wybrać?CechaFlexboxGridWymiarowość1D (rząd LUB kolumna)2D (rząd I kolumna jednocześnie)PodejścieContent-first (rozmiar zależy od treści)Layout-first (najpierw siatka, potem treść)ZastosowanieMenu, paski nawigacji, centrowanieCałe układy stron, galerie, dashboardyCzy potrzebujesz gotowego kodu na konkretny komponent, np. wycentrowany formularz?
