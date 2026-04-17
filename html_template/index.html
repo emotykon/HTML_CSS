@@ -3,42 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tytuł Strony</title>
+    <title>Uniwersalny Template</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="navbar">
       <div class="container">
-        <div class="logo">Logo</div>
+        <div class="logo">Brand</div>
         <nav>
           <ul class="nav-links">
-            <li><a href="#">Start</a></li>
-            <li><a href="#">O nas</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#form">Kontakt</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main class="container">
-      <section class="hero">
-        <h1>Nagłówek główny</h1>
-        <p>
-          To jest uniwersalny opis Twojej sekcji. Możesz go dowolnie
-          modyfikować.
-        </p>
-        <button class="btn">Działaj</button>
+      <section class="split-section">
+        <div class="split-image">
+          <img
+            src="https://picsum.photos/600/400"
+            alt="Niestandardowy layout"
+          />
+        </div>
+        <div class="split-content">
+          <h2>Niestandardowy Układ</h2>
+          <p>
+            To jest przykład sekcji dzielonej. Idealna do prezentacji funkcji
+            produktu lub opisu "O nas".
+          </p>
+          <a href="#" class="btn">Dowiedz się więcej</a>
+        </div>
       </section>
 
-      <section class="grid-layout">
-        <div class="card">Karta 1</div>
-        <div class="card">Karta 2</div>
-        <div class="card">Karta 3</div>
+      <section id="form" class="form-container">
+        <h3>Napisz do nas</h3>
+        <form action="#">
+          <div class="form-group">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" placeholder="Wpisz swoje imię..." />
+          </div>
+
+          <div class="form-group">
+            <label for="topic">Wybierz temat</label>
+            <select id="topic">
+              <option value="" disabled selected>
+                Wybierz opcję z listy...
+              </option>
+              <option value="support">Wsparcie techniczne</option>
+              <option value="sales">Dział sprzedaży</option>
+              <option value="other">Inne</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Wiadomość</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="W czym możemy pomóc?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn full-width">Wyślij formularz</button>
+        </form>
       </section>
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 Twoja Marka. Wszelkie prawa zastrzeżone.</p>
+      <p>&copy; 2026 Projekt. Czysty i prosty kod.</p>
     </footer>
   </body>
 </html>
