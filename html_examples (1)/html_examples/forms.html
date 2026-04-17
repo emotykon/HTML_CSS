@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type"
+          content="text/html; charset=utf-8" />
+    <title>Page title</title>
+
+</head>
+<body>
+<form action="forms.html" method="get">
+    <fieldset>
+	<legend>Bank transfer details</legend>
+	<label>
+		<span class="label-text">Account number</span>
+		<input name="number" pattern="PL[0-9]{26}" list="standard-accounts" />
+		<datalist id="standard-accounts">
+			<option value="PL59114020040000370274074980"></option>
+		</datalist>
+    </label><br />
+	<label>
+		<span class="label-text">Recipient</span>
+		<input name="recipient" />
+    </label><br />
+	<label>
+		<span class="label-text">Transfer note</span>
+		<textarea name="note"></textarea>
+	</label><br />
+	<label>
+		<span class="label-text">Amount </span>
+		<input name="amount" type="number" step="0.01" min="0.01" value="100" />
+		<label>
+			<span class="label-text">Currency</span>
+			<select name="currency">
+				<option value="1">PLN</option>
+				<option value="2">EUR</option>
+			</select>
+		</label>
+	</label><br />
+	<label>
+		<span class="label-text">Transfer date</span>
+		<input name="date" type="date" min="2019-03-19" />
+	</label><br />
+		<span class="label-text">Transfer type</span>
+		<label>ELIXIR <input name="type" value="elixir" type="radio" checked="checked" /></label>
+		<label>SORBNET <input name="type" value="sorbnet" type="radio" /></label>
+	<br />
+	</fieldset>
+    <fieldset>
+	<legend>Additional details</legend>
+		<label>
+			<span class="label-text">Buy insurance for the transfer</span>
+			<input name="insure" type="checkbox" /><br />
+		</label>
+		<label>
+			<span class="label-text">Confirmation e-mail</span>
+			<input name="email" type="email" /><br />
+		</label>
+	</fieldset>
+	<button type="submit">Send money nowhere</button>
+</form>
+</body>
+</html>

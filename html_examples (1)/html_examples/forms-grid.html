@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type"
+          content="text/html; charset=utf-8" />
+    <title>Page title</title>
+	<style type="text/css">
+		.grid-container {
+			display: grid;
+			grid-template-columns: 200px auto;
+		}
+		
+		.input-transfer-data {
+			width: 20em;
+			max-width: 20em;
+			min-width: 20em;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+		}
+		
+		textarea.input-transfer-data {
+		padding: 1px 1px 1px 1px;
+		}
+	</style>
+</head>
+<body>
+<form action="forms-grid.html" method="get">
+    <fieldset>
+	<legend>Bank transfer details</legend>
+	<div class="grid-container">
+		<div><label for="number" class="label-text">Account number</label></div>
+		<div><input id="number" class="input-transfer-data" name="number" pattern="PL[0-9]{26}" /></div>
+		<div><label for="recipient" class="label-text">Recipient</label></div>
+		<div><input id="recipient" class="input-transfer-data" name="recipient" /></div>
+		<div><label for="note" class="label-text">Transfer note</label></div>
+		<div><textarea id="note"  class="input-transfer-data" name="note"></textarea></div>
+		<div><label for="amount" class="label-text">Amount</label></div>
+		<div><input id="amount" class="input-transfer-data" name="amount" type="number" step="0.01" min="0.01" value="100" /></div>
+		<div><label for="date" class="label-text">Transfer date</label></div>
+		<div><input id="date" class="input-transfer-data" name="date" type="date" min="2019-03-19" /></div>
+	</div>
+	</fieldset>
+	<button type="submit">Send money nowhere</button>
+</form>
+</body>
+</html>
